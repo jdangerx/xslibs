@@ -1,9 +1,9 @@
 from numpy import logspace
 from xsgen.nuc_track import transmute
 
-#############################
-### General specifcations ###
-#############################
+##############################
+### General Specifications ###
+##############################
 reactor = "lwr1g"
 plugins = ['xsgen.pre', 'xsgen.buk']
 solver = 'openmc+origen'
@@ -14,11 +14,9 @@ time_step = 100      # Time step by which to increment the burn [days]
 burn_times = [0, 3]
 burn_times.extend(range(100, 7001, 100))  # we now have [0, 3, 100, 200 .. 4000]
 
-batches = 3
-
 
 ################################
-### Unit Cell Sepcifications ###
+### Unit Cell Specifications ###
 ################################
 fuel_cell_radius = 0.410
 void_cell_radius = 0.4185
@@ -39,8 +37,6 @@ initial_heavy_metal = {     # Initial heavy metal mass fraction distribution
     }
 
 enrichment = 0.04
-
-pnl = 0.96
 
 # UOX
 fuel_chemical_form = {                 # Dictionary of initial fuel loading.
